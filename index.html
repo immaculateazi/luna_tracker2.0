@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 2do List</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="menu-overlay"></div>
+    <header class="tracker-header">
+        <nav class="tracker-nav">
+            <h2 class="app-name">Luna_Tracker</h2>
+
+            <div id="hamburger" class="hamburger"> 
+                <span></span><span></span><span></span>
+            </div>
+
+            <ul id="nav-menu" class="nav-menu">
+                <li class="dropdown">
+                    <a href="#">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Story</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Contact</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="task-container">
+        <div class="app">
+
+            <h1><i class="fas fa-list-check"></i> Daily Task List</h1>
+
+            
+            <div class="row">
+                <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100">
+
+                <select id="categorySelect" aria-label="Category">
+                    <option value="General">General</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Study">Study</option>
+                </select>
+
+                <input type="date" id="dueDateInput" aria-label="Due date">
+
+                <button id="addTaskBtn">Add</button>
+            </div>
+
+            <div class="controls-row" style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap">
+                <label>
+                    Category:
+                    <select id="filterCategory">
+                        <option value="All">All</option>
+                        <option value="General">General</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Study">Study</option>
+                    </select>
+                </label>
+
+                <label>
+                    Date:
+                    <input type="date" id="calendarDate">
+                </label>
+
+                <button id="showAllBtn">Show All</button>
+
+                <div style="margin-left:auto;display:flex;gap:12px;align-items:center">
+                    <label style="display:flex;flex-direction:column;align-items:flex-end">
+                        Daily Goal
+                        <input type="number" id="dailyGoalInput" min="0" placeholder="Set goal" style="width:90px;padding:6px;border-radius:6px">
+                    </label>
+
+                    <div id="daily-goal-status" style="text-align:right">
+                        <div id="today-completed">Done today: 0</div>
+                        <div id="daily-goal-progress" style="width:140px;background:rgba(255,255,255,0.12);height:8px;border-radius:8px;overflow:hidden;margin-top:6px">
+                            <div id="daily-goal-bar" style="width:0%;height:100%;background:linear-gradient(90deg,#ffae47,#ff7b00)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <button id="clearCompletedBtn" style="margin-top: 16px;">Clear Completed</button>
+
+            <div id="progress-section">
+                <p id="progress-text">Progress: 0%</p>
+                <div id="progress-bar-container"><div id="progress-bar"></div></div>
+                <p id="motivation-message">A fresh start ✨ Let's go!</p>
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>© 2025 Luna_Tracks By Immaculate Azi. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/immaculateazi/" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/immaculateazi" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/2349071497277" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
